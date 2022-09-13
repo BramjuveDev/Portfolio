@@ -19,33 +19,26 @@ const Event = dynamic<EventProps>(
 const ACTIONS: Array<NavigationItem> = [
 	{
 		type: NavigationItemType.LINK,
-		href: '/blog',
-		icon: <Icon className="mr-3" icon="feather:edit-3" />,
-		text: 'Blog',
-	},
-	{
-		type: NavigationItemType.LINK,
 		href: '/projects',
-		icon: <Icon className="mr-3" icon="feather:copy" />,
+		icon: <Icon className="mr-3" icon="feather:code" />,
 		text: 'Projects',
 	},
 	{
 		type: NavigationItemType.LINK,
-		external: true,
-		href: 'https://github.com/nurodev',
-		icon: <Icon className="mr-3" icon="feather:github" />,
-		text: 'GitHub',
-	},
+		href: '/blog',
+		icon: <Icon className="mr-3" icon="feather:edit-3" />,
+		text: 'Blog',
+	}
 ];
 
 export default function HomePage() {
 	const today = new Date();
-	const birthday = new Date('1997-08-09');
+	const birthday = new Date('2006-03-23');
 	const age = differenceInYears(today, birthday);
 	const isBirthday =
 		today.getDate() === birthday.getDate() && today.getMonth() === birthday.getMonth();
 
-	const description = `I am a ${age} year old software engineer & games developer`;
+	const description = `Ik ben een ${age} jarige freelance front-end developer`;
 
 	return (
 		<Layout.Default>
@@ -58,9 +51,9 @@ export default function HomePage() {
 							opacity: [0, 1],
 							scale: [0.75, 1],
 						}}
-						className="text-gray-500 dark:text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl tracking-tight font-extrabold">
+						className="text-gray-500 dark:text-white text-4xl sm:text-5xl md:text-5xl lg:text-6xl tracking-tight font-extrabold">
 						Hey <span className="inline-block origin-70 hover:(animate-wave)">👋</span>{' '}
-						I&apos;m Ben, <br className="hidden sm:block" />a{' '}
+						Ik ben Bram, <br className="hidden sm:block" />een freelance{' '}
 						<Pill.Standard className="mt-4">developer</Pill.Standard>
 					</Animate>
 
